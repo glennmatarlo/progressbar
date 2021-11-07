@@ -1,31 +1,29 @@
-<div class="container mt-4 mx-auto"  style="width: 35rem;">
-  <div class="card mb-3">
+<div style="background-image:url(https://cdn130.picsart.com/257722574007212.png);background-attachment:fixed; background-repeat: no-repeat; background-position:center;">
+<div class="mx-auto"  style="width: 35rem;"><br><br><br><br><br><br><br><br>
+  <div class="card border-warning mb-1">
     <div class="row g-0">
       <div class="col-md-4">
-        <img src="https://i.pinimg.com/736x/55/f8/af/55f8afd0d4c2224653f1ba467b6543e8.jpg" class="img-fluid rounded-start mt-5" alt="...">
-        <div class="container">
-          <input class="form-control" style="width: 100%" type="number" [(ngModel)]="inputMax" placeholder="Enter Max Value">
-          <button class="btn btn-warning mt-1" style="width: 100%" type="button" (click)="enterMax()">Enter max</button>
-        </div>
+        <img src="https://icon-library.com/images/projects-icon-png/projects-icon-png-8.jpg" class="img-fluid rounded-start" alt="...">
       </div>
       <div class="col-md-8">
         <div class="card-body">
-          <div class="container mt-3 mb-3">
-            <label for="prog" class="gg mb-4">Company's status</label>
-            <div class="d-inline d-flex mt-2">
-              <mat-progress-bar class="prog" color="warn" max="100" style="width: 80%" [bufferValue]="max" mode="buffer" [value]="currentProg"></mat-progress-bar><br>
-              <div class="gg">&nbsp; <b>{{currentProg}}</b>%</div>
+          <div class="container">
+            <label for="prog" class="gg mb-4">{{labels}}</label>
+            <div *ngIf="normalPB" class="mt-1" (click)="onClick()">
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" [ngStyle]="{'width.%':value}"></div>
+              </div>
+              <div>&nbsp; <b>{{label}} {{value}}</b>%</div>
             </div>
             <br>
             <div>
-              <input class="form-control" style="width: 100%" type="number" [(ngModel)]="txtRateValue" placeholder="Enter Value">
-              <button class="btn btn-warning mt-1" style="width: 100%" type="button" (click)="updateRating()">Enter</button>
+              <button class="btn btn-warning mt-1" style="width: 100%" type="button" (click)="showProgressBar(1)">Enter</button>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-  
-  <div class="errors text-center">{{error}}</div>
+  <br><br><br><br><br><br>
+</div>
 </div>

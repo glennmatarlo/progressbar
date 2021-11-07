@@ -2,16 +2,6 @@
     font-size: 19pt
   }
 
-.prog{
-    height: 30px;
-    border-radius: 4px;
-}
-
-.errors{
-    color: rgba(238, 8, 8, 0.815);
-    width: 100%;
-}
-
 .slider{
     width: 100%;
 }
